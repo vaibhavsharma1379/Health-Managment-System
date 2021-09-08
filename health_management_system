@@ -1,0 +1,87 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+def lock_exercise(person_name,exercise_name):
+    if person_name==1:
+        a=exercise_name
+        f=open("harry_exercise.py","a")
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur exercise succesfully")
+        f.close()
+    if person_name==2:
+        a = exercise_name
+        f=open("vaibhav_exercise.py","a")
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur exercise succesfully")
+        f.close()
+    if person_name==3:
+        a = exercise_name
+        f=open("hammad_exercise.py","a")
+
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur exercise succesfully")
+        f.close()
+def lock_food(person_name,food_name):
+    if person_name==1:
+        a=food_name
+        f = open("harry_food.py", "a")
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur food succesfully")
+        f.close()
+    if person_name==2:
+        a = food_name
+        f=open("vaibhav_food.py","a")
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur food succesfully")
+        f.close()
+    if person_name==3:
+        a = food_name
+        f=open("hammad_food.py","a")
+        f.write(str([str(getdate())])+": "+a+'\n')
+        print("thnku u have log ur food succesfully")
+        f.close()
+def retrive_food(person_name):
+    if person_name == 1:
+        f=open("harry_food.py")
+        print(f.read())
+        f.close()
+    if person_name == 2:
+        f=open("vaibhav_food.py")
+        print(f.read())
+        f.close()
+    if person_name == 3:
+        f=open("hammad_food.py")
+        print(f.read())
+        f.close()
+def retrive_exercise(person_name):
+    if person_name == 1:
+        f=open("harry_exercise.py")
+        print(f.read())
+        f.close()
+    if person_name == 2:
+        f=open("vaibhav_exercise.py")
+        print(f.read())
+        f.close()
+    if person_name == 3:
+        f=open("hammad_exercise.py")
+        print(f.read())
+        f.close()
+action=int(input("press 1 for lock , press 2 for retrive"))
+if action==1:
+    lock_action = int(input("press 1 for lock exercise , press 2 for lock food"))
+    if lock_action == 1:
+        person_name = int(input("press 1 for harry , press 2 for vaibhav ,press 3 for hammad"))
+        exercise_name = str(input("write exercise name"))
+        lock_exercise(person_name, exercise_name)
+    if lock_action == 2:
+        person_name = int(input("press 1 for harry , press 2 for vaibhav ,press 3 for hammad"))
+        food_name = str(input("write food name"))
+        lock_food(person_name, food_name)
+if action==2:
+    retrive_action=int(input("press 1 for retrive exercise , press 2 for retrive food"))
+    if retrive_action==1:
+        person_name = int(input("press 1 for harry , press 2 for vaibhav ,press 3 for hammad"))
+        retrive_exercise(person_name)
+    if retrive_action == 2:
+        person_name = int(input("press 1 for harry , press 2 for vaibhav ,press 3 for hammad"))
+        retrive_food(person_name)
